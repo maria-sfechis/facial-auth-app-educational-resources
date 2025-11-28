@@ -1,0 +1,32 @@
+{
+  "name": "facial-auth-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env HTTPS=true HOST=0.0.0.0 REACT_APP_USE_HTTPS=true react-scripts start",
+    "start:http": "cross-env HOST=0.0.0.0 REACT_APP_USE_HTTPS=false react-scripts start",
+    "start:https": "cross-env HTTPS=true HOST=0.0.0.0 REACT_APP_USE_HTTPS=true react-scripts start",
+    "start:local": "cross-env HTTPS=true REACT_APP_USE_HTTPS=true react-scripts start",
+    "build": "react-scripts build",
+    "generate-cert": "node generate-cert.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "multer": "^2.0.1",
+    "mysql2": "^3.14.1",
+    "nodemailer": "^7.0.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
